@@ -1,0 +1,37 @@
+<div style="border: 1px solid orange">
+  <h2 style="width: 100%; border: 1px solid orange">Pantry List Component:</h2>
+
+  <div style="border: 1px solid orange">
+    pantry list component:
+    <table>
+      <tr>
+        <th>[amount]</th>
+        <th>[food type]</th>
+        <th>[date acquired]</th>
+        <th>[date expires]</th>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>apples</td>
+        <td>may 5</td>
+        <td>June 5</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>lb. fish</td>
+        <td>may 15</td>
+        <td>may 18</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>golden marmosets</td>
+        <td>may 5</td>
+        <td>June 5</td>
+      </tr>
+    </table>
+    <button *ngIf="booly" (click)="toggle()">DONT TELL ME WHAT TO DO</button>
+    <button *ngIf="!booly" (click)="toggle()">show me options</button>
+    <p>Show me options button unhides PLAN MY DINNER component</p>
+  </div>
+  <app-dinner-plan *ngIf="booly"></app-dinner-plan>
+</div>
