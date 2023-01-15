@@ -2,15 +2,14 @@
   <h2 style="width: 100%; border: 1px solid black">Grocery List Component:</h2>
   <table style="border: 1px solid black">
     <tr>
-      <th>Add Item Component</th>
-      <th>Go Shop Component</th>
+      <th>
+        <button>Add Item Component</button>
+      </th>
+      <th><button (click)="toggle()">Go Shop Component</button></th>
     </tr>
     <tr>
       <td>"Add Item component" takes user through the "add item flow";</td>
-      <td>
-        "Go Shop Component" takes user to a shopping list of current grocery
-        list
-      </td>
+      <td>takes user to a shopping list of current grocery list</td>
     </tr>
     <tr>
       <td>
@@ -47,4 +46,5 @@
       </tr>
     </table>
   </div>
+  <app-shopping *ngIf="booly"></app-shopping>
 </div>
