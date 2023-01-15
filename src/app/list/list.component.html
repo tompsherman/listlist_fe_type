@@ -1,0 +1,30 @@
+<div>
+  <h1>List Component:</h1>
+  <h2>To-Do List (App Development):</h2>
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Description</th>
+      <th>Completed?</th>
+    </tr>
+    <tr *ngFor="let item of todoItems">
+      <td>{{ item.task }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.completed }}</td>
+    </tr>
+  </table>
+
+  <h2>Grocery List:</h2>
+  <table>
+    <tr>
+      <th>Amount</th>
+      <th>Item</th>
+      <th>In Basket?</th>
+    </tr>
+    <tr *ngFor="let item of groceryItems">
+      <td>{{ item.amount }}</td>
+      <td>{{ item.item }}</td>
+      <td>{{ item.completed }}</td>
+    </tr>
+  </table>
+</div>
