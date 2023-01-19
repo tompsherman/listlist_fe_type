@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   // groceryItems:[] = []
+  constructor() {}
+  
+ngOnInit(){
 
+}
   groceryItems = [
     { amount: 5, item: 'apples', completed: false },
     { amount: 1, item: 'lb. fish', completed: false },
