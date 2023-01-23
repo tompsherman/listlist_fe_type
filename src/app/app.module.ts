@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 
 import { ListModule } from './list/list.module';
 import { NavComponent } from './navigation/nav.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, NavComponent],
-  imports: [BrowserModule, AppRoutingModule, ListModule],
+  imports: [BrowserModule, AppRoutingModule, ListModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

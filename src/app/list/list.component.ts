@@ -52,4 +52,127 @@ ngOnInit(){
       completed: false,
     },
   ];
+
+  fortunes = [
+    {
+      id: 1,
+      fortune: "They cannot take away our self-respect if we do not give it to them."
+    },
+    {
+      id: 2,
+      fortune: ""
+    },
+    {
+      id: 3,
+      fortune: ""
+    },
+    {
+      id: 4,
+      fortune: ""
+    },
+    {
+      id: 5,
+      fortune: ""
+    },
+    {
+      id: 6,
+      fortune: ""
+    },
+    {
+      id: 7,
+      fortune: ""
+    },
+    {
+      id: 8,
+      fortune: ""
+    },
+    {
+      id: 9,
+      fortune: ""
+    },
+    {
+      id: 10,
+      fortune: ""
+    },
+    {
+      id: 11,
+      fortune: ""
+    },
+    {
+      id: 12,
+      fortune: ""
+    },
+    {
+      id: 13,
+      fortune: ""
+    },
+    {
+      id: 14,
+      fortune: ""
+    },
+    {
+      id: 15,
+      fortune: ""
+    },
+    {
+      id: 16,
+      fortune: ""
+    },
+    {
+      id: 17,
+      fortune: ""
+    },
+    {
+      id: 18,
+      fortune: ""
+    },
+    {
+      id: 19,
+      fortune: ""
+    },
+    {
+      id: 20,
+      fortune: ""
+    },
+    {
+      id: 21,
+      fortune: ""
+    },
+    {
+      id: 22,
+      fortune: ""
+    },
+    {
+      id: 23,
+      fortune: ""
+    },
+    {
+      id: 24,
+      fortune: ""
+    },
+    {
+      id: 25,
+      fortune: ""
+    },
+    {
+      id: 26,
+      fortune: ""
+    },
+    {
+      id: 27,
+      fortune: ""
+    },
+    {
+      id: 28,
+      fortune: ""
+    },
+    {
+      id: 29,
+      fortune: ""
+    },
+    {
+      id: 30,
+      fortune: ""
+    },
+  ]
 }
