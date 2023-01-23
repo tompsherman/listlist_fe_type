@@ -3,6 +3,7 @@ export interface ITodo {
     task: string;
     description: string;
     completed: boolean;
+    points: number;
 }
 
 export interface IGrocery {

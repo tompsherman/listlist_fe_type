@@ -4,29 +4,31 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>Task</th>
-            <th>Description</th>
-            <th>Completed</th>
+            <th (click)="sort('name')">Task</th>
+            <th (click)="sort('description')">Description</th>
+            <th (click)="sort('points')">Points</th>
+            <th (click)="sort('completed')">Completed</th>
         </tr>
     </thead>
-    <tr>
+    <tr *ngFor="let todo of filteredTodos">
         <td>
             <a>
-                
+                {{ todo.task }}
             </a>
         </td>
-        <td></td>
-        <td></td>
+        <td>{{ todo.description }}</td>
+        <td>{{ todo.points }}</td>
+        <td>{{ todo.completed }}</td>
     </tr>
-    <tr>
+    <tr *ngIf="filteredTodos && filteredTodos.length">
         <td colspan="2">&nbsp;</td>
         <td>
-            
+            {{ todosTotal }}
         </td>
     </tr>
-    <tr>
+    <tr *ngIf="!filteredTodos || !filteredTodos.length">
         <td colspan="4">No tasks to-do</td>
     </tr>
 </table>
-Number of Tasks completed:
+Number of Tasks To Do: {{ filteredTodos.length }}
 <br />
