@@ -6,16 +6,15 @@ import { toggleSwitch } from 'src/app/shared/functions';
 @Component({
   selector: 'todo-list',
   templateUrl: './todo-list.component.html',
-  // styleUrls:
+  styleUrls: ['./todo-list.component.scss'],
 })
 export class ToDoListComponent implements OnInit {
-  toggleSwitch = toggleSwitch;
-  toggle: any;
+  // input decorator retrieves and sets data from parent component
   private _todos: ITodo[] = [];
+
   @Input() get todos(): ITodo[] {
     return this._todos;
   }
-
   set todos(value: ITodo[]) {
     if (value) {
       this.filteredTodos = this._todos = value;
@@ -23,23 +22,15 @@ export class ToDoListComponent implements OnInit {
     }
   }
 
+  // component variables
   filteredTodos: ITodo[] = [];
   todosTotal: number = 0;
+  isComplete: boolean = false;
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.toggle);
-    toggleSwitch(this.toggle);
-    console.log(this.toggle);
-  }
-
-  whatever() {
-    console.log(this.toggle);
-    this.toggle = !this.toggle;
-    console.log(this.toggle);
-    return this.toggle;
-  }
+  //when component initializes
+  ngOnInit() {}
 
   calculateTodos() {
     this.filteredTodos.forEach((todo: ITodo) => {
@@ -47,6 +38,22 @@ export class ToDoListComponent implements OnInit {
     });
   }
 
+  filter(data: string) {
+    this.todosTotal = 0;
+    if (data) {
+      this.filteredTodos = this.todos.filter((todo: ITodo) => {
+        return (
+          todo.task.toLowerCase().indexOf(data.toLowerCase()) > -1 ||
+          todo.description.toLowerCase().indexOf(data.toLowerCase()) > -1 ||
+          todo.completed.toString().indexOf(data.toLowerCase()) > -1 ||
+          todo.points.toString().indexOf(data.toString()) > -1
+        );
+      });
+    } else {
+      this.filteredTodos = this.todos;
+    }
+    this.calculateTodos();
+  }
   sort(prop: string) {
     // sorter service will handle the sorting
   }
