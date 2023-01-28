@@ -1,3 +1,6 @@
-export function toggleSwitch(toggleVariable: any){
-    toggleVariable = !toggleVariable
+export function toggleSwitch(toggleVariable: any) {
+  console.log(toggleVariable);
+  toggleVariable = !toggleVariable;
+  console.log(toggleVariable);
+  return toggleVariable;
 }
